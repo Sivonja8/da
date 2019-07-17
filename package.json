@@ -1,0 +1,20 @@
+{
+  "name": "hyper-bot",
+  "version": "2.5.0",
+  "description": "Hyper is the best and feature richest Discord Bot that is completely FREE on MC-Market!",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "fs": "^0.0.1-security",
+    "memejs": "^1.0.7",
+    "mc-hermes": "^0.1.5",
+    "moment": "^2.23.0",
+    "ms": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index"
+  },
+  "author": "kMagic",
+  "license": "ISC"
+}

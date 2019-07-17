@@ -1,0 +1,173 @@
+﻿Hello! Thanks for downloading this resource from MC-Market!
+I hope you like it. If you need any help, please contact me on Discord or DM me on MC-Market.
+Discord TAG: ♦ kMagic ♦#6276
+
+In this guide, I will show you how to properly install HYPER.
+
+////////////////////////////////////////////////////
+//                                                //
+//      Introduction and setup instructions       //
+//                                                //
+////////////////////////////////////////////////////
+
+First off all, you need to install NodeJS!
+
+Steps for WINDOWS users:
+1. go to https://nodejs.org/en/download/
+2. click on windows installer
+3. after the installer downloaded, click on it, and then press run
+4. press next
+5. accept the terms and conditions and click on next
+6. you can change the destination folder, it will not affect the bot in any way. After that, press next
+7. press next
+8. press install (will require administrator permission), wait 1 or 2 minutes to install and then press finish
+
+Steps for macOS users:
+1. go to https://nodejs.org/en/download/
+2. click on macOS installer
+3. after the installer downloaded, click on it, and then press run
+4. press next
+5. accept the terms and conditions and click on next
+6. you can change the destination folder, it will not affect the bot in any way. After that, press next
+7. press next
+8. press install (will require administrator password), wait 1 or 2 minutes to install and then press finish
+
+Steps for Linux users (debian or ubuntu):
+1. open the terminal
+2. type curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+3. wait a few minutes for the files to download
+4. type sudo apt-get install -y nodejs
+
+Optional for Linux users (debian or ubuntu):
+ Install build tools
+   1. open the terminal
+   2. type sudo apt-get install -y build-essential
+
+Done! You now have NodeJS installed on your PC, Laptop or VPS.
+
+Now, you have to install the required packages for the bot to run.
+
+Steps:
+1. Open the folder that Hyper is in
+
+ FOR WINDOWS USERS:
+  2. run setup.bat
+  3. wait a few seconds for the packages to install
+  4. press any key to close the script
+
+ FOR LINUX USERS:
+  2. open the terminal (if you're on desktop version) in that folder
+  3. type this in it: npm i discord.js ms fs moment mc-hermes memejs --save
+  4. wait a few minutes for it to install all the packages
+
+ FOR MAC USERS:
+  2. open a terminal in that folder
+  3. type this in it: npm i discord.js ms fs moment mc-hermes memejs --save
+  4. wait a few minutes for it to install all the packages
+
+Alright, we now have the packages installed. Now, let's set the bot up.
+Note: don't close the command propmt, folder or terminal!
+
+We now need a bot token!
+How to get that:
+1. go to https://discordapp.com/developers/
+2. click on "My Apps"
+3. click on New App
+4. enter a name for the application (your bot), and optional, add a description and set it an avatar
+5. click on create app
+6. scroll down untill you see the "Bot" section, and then click on "Create a Bot User"
+7. now, you can see a line that says "Token: click to reveal". Click on "click to reveal", and then copy the text that appeared.
+
+!!!  W A R N I N G  !!!
+
+Your bot's token is meant to be SECRET.
+It is the way by which your bot authenticates with the Discord server in the same way that you login to Discord with a username and password.
+Revealing your token is like putting your password on the internet, and anyone that gets this token can use your bot connection to do things.
+Like delete all the messages on your server and ban everyone.
+If your token ever reaches the internet, change it immediately.
+This includes putting it on pastebin/hastebin, having it in a public github repository, displaying a screenshot of it, anything.
+
+!!! END OF  W A R N I N G  !!!
+
+8. now, enter in the directory that Hyper is in, click on Storage and then click on config.json and on the token line, replace your-token with the token you copied
+   from the developers panel. make sure to save it!!
+
+Good. Now Hyper is ready to go!
+
+How to power Hyper on:
+ Steps for WINDOWS users:
+  1. run start.bat
+  2. copy the invite url that was given to you in the command prompt
+ Steps for macOS users:
+  1. run start.command
+  2. copy the invite url that was given to you in the terminal line
+ Steps for LINUX users (debian or ubuntu): (you need to use the terminal here)
+   1. type chmod +x start.sh
+   2. type ./start.sh
+   3. copy the invite url that was given to you in the terminal
+
+We now have Hyper online, but we didn't get him into your guild!
+How to invite Hyper into your guild:
+1. open your web browser
+2. paste the url you copied from the terminal or command prompt and press enter
+3. click on "Select a server" and select the server you want Hyper in
+4. click on Authorize
+5. solve the captcha
+6. exit the web browser or page.
+
+WARNING!! If you close the terminal, Hyper will shut down.
+
+How to keep Hyper powered on continuously with Forever:
+
+1. press CTRL+C to stop Hyper
+2. type npm i forever -g
+3. wait a few seconds for the package to install
+4. when it finished the instalation, type forever start index.js to start Hyper
+5. to stop Hyper type forever stop index.js
+6. to restart Hyper type forever restart index.js
+
+How to keep Hyper powered on continuously with PM2:
+
+1. press CTRL+C to stop Hyper
+2. type npm i pm2 -g
+3. wait a few seconds for the package to install
+4. when it finished the instalation, type pm2 start index.js to start Hyper
+5. to stop Hyper type pm2 stop index.js
+6. to restart Hyper type pm2 restart index.js
+
+More PM2 and Forever documentations here:
+Forever: https://www.npmjs.com/package/forever
+PM2: https://www.npmjs.com/package/pm2
+
+
+Good job! You now have a fully working Hyper in your discord server!
+
+////////////////////////////////////////////////////
+//                                                //
+//                Customisation                   //
+//                                                //
+////////////////////////////////////////////////////
+
+
+Now, you can customize Hyper! To customize Hyper, you must enter
+in the Storage folder and then open config.json.
+
+In there, you have a few lines:
+1. token = your bot's token
+   default value: "your-token"
+2. prefix = general bot's prefix
+   default value: "h!"
+3. version = bot's version (please do not edit, that will be edited by the bot's developer)
+   default value: "2.1" (this will be updated when you download updates from MCM)
+4. logging = when you have logging on true, all the commands executed by users will be logged into the terminal / command prompt. To turn it off, change true to false.
+   default value: true
+5. color = the preffered color for embeds
+   default value: "BLUE"
+   supported colors: BLUE, RED, YELLOW, BLACK, WHITE, MAGENTA, PURPLE, PINK, GREEN, CYAN, GRAY.
+6. lang = the preffered language (only en-US and RO are available right now)
+   default value: "en-US"
+
+You can also customize Hyper by customizing the messages!
+Enter in the messages folder and then click on edit on your actual or preffered language.
+
+Well, this is the end of the guide! Please note
